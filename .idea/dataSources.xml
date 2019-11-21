@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="H2" uuid="6779aed3-7839-42ea-84bf-45f19446c7ad">
+      <driver-ref>h2.unified</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:mem:trafficdata</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="POSTGRES" uuid="506939fc-7b06-49b2-8789-c766417188f6">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/trafficdata</jdbc-url>
+    </data-source>
+  </component>
+</project>

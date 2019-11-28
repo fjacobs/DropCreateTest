@@ -1,37 +1,29 @@
-package example.springdata.r2dbc.basics.configuration;
+package example.springdata.r2dbc.basics;
 
-
-import org.springframework.context.annotation.Profile;
-
-import io.r2dbc.postgresql.PostgresqlConnectionConfiguration;
-import io.r2dbc.postgresql.PostgresqlConnectionFactory;
 import io.r2dbc.spi.ConnectionFactories;
 import io.r2dbc.spi.ConnectionFactory;
 import io.r2dbc.spi.ConnectionFactoryOptions;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 import org.springframework.data.r2dbc.config.AbstractR2dbcConfiguration;
 import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories;
 
 import static io.r2dbc.spi.ConnectionFactoryOptions.*;
 
-@Profile("prod")
+
 @Configuration
 @EnableR2dbcRepositories
-public class PostgresConfig extends AbstractR2dbcConfiguration {
+public class PostgresConnectionFactory extends AbstractR2dbcConfiguration {
 
-    @Bean("myPostgresPoolFactory")
+    @Bean
     public ConnectionFactory connectionFactory() {
 
         return ConnectionFactories.get(ConnectionFactoryOptions.builder()
-                .option(DRIVER, "pool")
-                .option(PROTOCOL, "postgresql") // driver identifier, PROTOCOL is delegated as DRIVER by the pool.
+                .option(DRIVER, "postgresql")
                 .option(HOST, "localhost")
                 .option(PORT, 5432)
                 .option(USER, "postgres")
                 .option(PASSWORD, "admin")
-                .option(DATABASE, "trafficdata")
+                .option(DATABASE, "test")
                 .build());
     }
 }

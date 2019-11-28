@@ -40,9 +40,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class CustomerRepositoryIntegrationTests {
 
 	@Autowired CustomerRepository customers;
-	@Autowired DatabaseClient database;
-
-
+	DatabaseClient database;
 
 	@Before
 	public void setUp() {

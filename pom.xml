@@ -24,18 +24,9 @@
         <spring-boot-data-r2dbc.version>0.1.0.M2</spring-boot-data-r2dbc.version>
         <r2dbc-h2.version>0.8.0.BUILD-SNAPSHOT</r2dbc-h2.version>
         <r2dbc-postgres.version>0.8.0.BUILD-SNAPSHOT</r2dbc-postgres.version>
-        <r2dbc-pool.version>0.8.0.BUILD-SNAPSHOT</r2dbc-pool.version>
-        <postgresql.version>42.2.6</postgresql.version>
     </properties>
 
     <dependencies>
-
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>${postgresql.version}</version>
-            <scope>runtime</scope>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot.experimental</groupId>
@@ -49,7 +40,6 @@
             <version>${r2dbc-h2.version}</version>
         </dependency>
 
-
         <dependency>
             <groupId>io.r2dbc</groupId>
             <artifactId>r2dbc-postgresql</artifactId>
@@ -62,24 +52,21 @@
             <scope>test</scope>
         </dependency>
 
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>provided</scope>
-        </dependency>
 
+
+<!--        //&#45;&#45;&#45;&#45;-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <repositories>
@@ -95,5 +82,8 @@
             <url>https://repo.spring.io/libs-snapshot</url>
         </pluginRepository>
     </pluginRepositories>
+
+
+
 
 </project>
